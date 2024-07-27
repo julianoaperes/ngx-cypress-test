@@ -92,7 +92,11 @@
     "@types/node": "6.0.90",
     "codelyzer": "^5.0.1",
     "conventional-changelog-cli": "^2.1.1",
+<<<<<<< HEAD:package.json
     "cypress": "^13.13.1",
+=======
+    "cypress": "^13.5.0",
+>>>>>>> c3ebfdbc2243d36637214190096c7833c3b70059:cypress_test/package.json
     "husky": "0.13.3",
     "npm-run-all": "4.0.2",
     "rimraf": "2.6.1",
