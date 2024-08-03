@@ -32,3 +32,19 @@ describe('Finding element', () => {
   })
 
 })
+
+
+//The get method finds elements on the page by locator globaly. It means thet it will find all elements on the page aways.
+
+describe('Method Get', () => {
+
+  it('Testing the Get Method', () => {
+     cy.visit('/')
+     cy.contains('Forms').click()
+     cy.contains('Form Layouts').click()
+
+     cy.contains('nb-card', 'Horizontal form'). get('button')
+
+   })
+
+ })
