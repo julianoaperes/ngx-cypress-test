@@ -10,14 +10,15 @@ describe('Then Method', () => {
       cy.contains('Forms').click()
       cy.contains('Form Layouts').click()
   
-      // Inside the then provide the argument for call back function and give it a name "usingTheGridForm".
-      cy.contains('nb-card','Using the Grid').then(usingTheGridForm => {
-
-        
-
-      })
-
-
+      // Inside the then provide the argument for call back function and give it a name "usingTheGridForm". 
+      cy.contains('nb-card','Using the Grid').then( usingTheGridForm => {
+            // In this case, "then" is a Jquerry method and "contains" is chainable. We need to turn all of them "Chainable". For it, we need to wrap the "then" object. 
+            cy.wrap(usingTheGridForm).find('[for="inputEmail1"]').should('contain', 'Email')
+            cy.wrap(usingTheGridForm).find('[for="inputPassword2"]').should('contain', 'Password')
+        })
     })
-
 })
+
+
+
+
